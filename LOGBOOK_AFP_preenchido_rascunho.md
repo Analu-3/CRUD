@@ -253,7 +253,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 02 — 19/08
 1. **Desafio do ciclo (em 1 frase):** Guardar os dados de um gato em variáveis do tipo certo e fazer a entrada (`input`) e a saída (`print`) de dados.
-2. **O que implementei (commits / arquivos / links):** Arquivo `adocao_gatos.py`, com as variáveis do registro (`nomes`, `idades`, `sexos`, `cores`, `locais`, `adotantes`), a variável `opcao` do menu e as mensagens do `print`. Commit `docs(logbook): registro do ciclo 02`.
+2. **O que implementei (commits / arquivos / links):** Arquivo `crud_gatinhos.py`, com as variáveis do registro (`nomes`, `idades`, `sexos`, `cores`, `locais`, `adotantes`), a variável `opcao` do menu e as mensagens do `print`. Commit `docs(logbook): registro do ciclo 02`.
 3. **Objeto(s) de conhecimento mobilizado(s):** variável e atribuição; tipos de dados `str` e `bool` (`feito`, `ok`, `criando`); `input()`, que sempre devolve `str`; `print()`; concatenação de textos com `+`; conversão de tipo com `int()`.
 4. **Desvio ou erro encontrado + causa técnica:** Problema identificado: a variável `numero` do laço é um texto (`"1"`, `"2"`...). Usá-la direto como posição (`nomes[numero]`) dá `TypeError`, porque a posição precisa ser `int`. Causa: o `input()` e o laço sobre texto produzem `str`, não número.
 5. **Decisão de ajuste + fonte:** Converti com `i = int(numero) - 1`; o `- 1` é porque a posição começa em 0. Também mantive a idade como texto, já que `input()` devolve texto e ela só é mostrada, não calculada. Fonte: *Pense em Python*, cap. 2 (variáveis, expressões e instruções).
@@ -272,7 +272,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 03 — 26/08
 1. **Desafio do ciclo (em 1 frase):** Usar operadores para comparar entradas e combinar condições (por exemplo, "é o cadastro escolhido **e** está ocupado").
-2. **O que implementei (commits / arquivos / links):** Comparações e condições combinadas no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 03`.
+2. **O que implementei (commits / arquivos / links):** Comparações e condições combinadas no `crud_gatinho.py`. Commit `docs(logbook): registro do ciclo 03`.
 3. **Objeto(s) de conhecimento mobilizado(s):** operadores relacionais (`==`, `!=`, `<`, `>`); lógicos (`and`, `or`); aritmético (`-`, em `int(numero) - 1`); `bool` como sinalizador (`feito`). Comparei letras com `"0"` e `"9"` para saber se a idade tem só dígitos.
 4. **Desvio ou erro encontrado + causa técnica:** Confusão entre `=` e `==`: na linha `criando = nomes[i] == ""` o primeiro `=` **atribui** e o segundo `==` **compara**; trocá-los muda o resultado ou dá `SyntaxError`. Outro ponto: `"1" == 1` é `False`, porque texto e número são tipos diferentes.
 5. **Decisão de ajuste + fonte:** Comparei sempre texto com texto (`escolhido == numero`). Fonte: *Pense em Python*, cap. 5 (expressões booleanas e operadores lógicos).
@@ -293,7 +293,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 04 — 02/09
 1. **Desafio do ciclo (em 1 frase):** Ligar cada condicional (`if`, `elif`, `else`) a uma regra de negócio do sistema de adoção.
-2. **O que implementei (commits / arquivos / links):** Menu e regras com `if/elif/else` no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 04`.
+2. **O que implementei (commits / arquivos / links):** Menu e regras com `if/elif/else` no `crud_gatinhos.py`. Commit `docs(logbook): registro do ciclo 04`.
 3. **Objeto(s) de conhecimento mobilizado(s):** estrutura condicional `if/elif/else`; validação de entrada. Regras de negócio e condicionais correspondentes:
    - opção do menu inválida → `else` mostra erro;
    - gato já adotado não pode ser adotado de novo → `elif adotantes[i] != ""`;
