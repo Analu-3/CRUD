@@ -197,7 +197,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **Campo 01 — Instrumento de entrada** · *sem consulta · faça primeiro*
 - Preencha **antes de tudo**, em um bloco contínuo de cerca de 15 minutos, sem internet, sem material, sem IA e sem colegas, depois de conhecer a questão-problema e a primeira amostra de dados do seu app. Depois do Campo 01 você pode consultar o que quiser.
-- **1a.** Variáveis: para guardar as informações dos gatos cadastrados.*
+- **1a.** Liste pelo menos 3 objetos de conhecimento que você acha que precisa dominar para resolver o problema. Use o vocabulário técnico da área. Não precisa acertar tudo — o Campo 07 vai mostrar o quanto você evoluiu.*
 - **1b.** Liste pelo menos **3 lacunas**: o que você **não sabe** e precisa descobrir, com precisão (ruim: "não sei programar"; bom: "não sei como validar a entrada para impedir que o usuário digite texto onde espero número").
 - **1c.** Escreva sua **hipótese inicial** em até 5 linhas: o que você acha que está causando as falhas do CRUD e por quê.
 - Faça o commit **logo ao terminar**. Depois, **não edite** o Campo 01.
@@ -213,19 +213,20 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 *Grupo 1 | Prazo segunda 16/11, 23h59 | SEM CONSULTA*
 
 **1a. Objetos de conhecimento identificados (mínimo 3, com vocabulário técnico):**
-1. _…_
-2. _…_
-3. _…_
+1. _Variáveis: para guardar as informações dos gatos cadastrados._
+2. _Tipos de dados: para compreender a diferença entre textos e números._
+3. _Entrada e saída de dados: para receber informações pelo input() e mostrar resultados pelo print()._
 4. _…_ *(opcional)*
 
 **1b. Lacunas — o que não sei e preciso descobrir (mínimo 3, com precisão técnica):**
-1. _…_
-2. _…_
-3. _…_
+1. _Ainda tenho dificuldade para entender como guardar várias informações de diferentes gatos sem misturar os dados._
+2. _Não sei validar corretamente o que o usuário digita, principalmente quando ele deixa um campo obrigatório vazio._
+3. _Tenho dúvida sobre como o programa consegue repetir o menu e continuar funcionando até o usuário escolher sair.
+_
 
 **1c. Hipótese inicial em até 5 linhas — com lógica da área de formação:**
 
-> _…_
+> _Acredito que os problemas do sistema podem acontecer quando o usuário digita informações incorretas ou tenta acessar um cadastro que não existe. Também acho que preciso organizar melhor os dados para que cada gato tenha suas próprias informações. A validação das entradas pode evitar parte desses erros._
 
 ### 🧩 CAMPO 02 — Aprofundamento pós-aula
 *AV Qualis — Grupo 1 | Segunda 16/11, 23h59*
@@ -240,8 +241,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **2b. Hipótese revisada — o que mudou em relação ao Campo 01 e por quê:**
 
-> [PREENCHER: depende do SEU Campo 01, que eu não posso escrever nem ver. Em 3 a 5 linhas, use esta estrutura com as suas palavras: "No Campo 01 eu achava que ___. Depois de ler (Referências 1 a 3) entendi que ___, por exemplo que o `input()` devolve texto e que a posição de uma lista começa em 0. Por isso agora considero que ___."]
-
+> Minha hipótese inicial continua válida, mas agora entendo que o problema não está apenas no que o usuário digita. Também é necessário organizar os dados corretamente e verificar as condições antes de realizar uma operação. No meu código, por exemplo, os nomes e as demais informações ficam em listas separadas, e a posição de cada gato precisa ser a mesma em todas elas.
 **2c. Dimensionamento inicial de recursos (recurso, quantidade estimada, justificativa técnica — mínimo 3 itens):**
 
 | RECURSO / MATERIAL / INSUMO | QUANTIDADE ESTIMADA | JUSTIFICATIVA TÉCNICA |
