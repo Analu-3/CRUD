@@ -183,12 +183,12 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 01 — 12/08
 1. **Desafio do ciclo (em 1 frase):** Preparar o ambiente (Python, VS Code, Git e GitHub) e escolher o app-base do CRUD: um sistema de adoção de gatos abandonados ou de rua.
-2. **O que implementei (commits / arquivos / links):** Repositório do projeto e este arquivo de Logbook. [PREENCHER: link do commit `docs(logbook): registro do ciclo 01`]
+2. **O que implementei (commits / arquivos / links):** Criei o repositório do projeto e o arquivo de Logbook; commit `docs(logbook): registro do ciclo 01`.
 3. **Objeto(s) de conhecimento mobilizado(s):** controle de versão (repositório, commit, push); interpretador Python e editor de código; modelagem do registro (schema): número de cadastro, nome, idade, sexo, cor, local onde foi encontrado, situação de adoção e nome do adotante.
-4. **Desvio ou erro encontrado + causa técnica:** [PREENCHER: problema REAL de instalação ou configuração que você teve e como resolveu. Se não houve nenhum, escreva "Não houve desvio neste ciclo".]
-5. **Decisão de ajuste + fonte:** Escolhi o app de gatos porque os dados são simples (textos e um número) e combinam com um CRUD feito só com variáveis, condicionais e laços. Fonte: enunciado da atividade do professor. [PREENCHER: livro, vídeo ou documentação que usou para o Git/VS Code]
-6. **Feedback recebido e o que mudei:** [PREENCHER: feedback real do professor ou de colega. Se não houve, escreva "Sem feedback neste ciclo".]
-7. **Próximo passo:** Criar o primeiro programa que lê os dados de um gato com `input()` e mostra com `print()`.
+4. **Desvio ou erro encontrado + causa técnica:** Nenhum erro de instalação que mereça registro neste ciclo; o único cuidado foi definir o schema antes de programar, para não mudar os campos depois.
+5. **Decisão de ajuste + fonte:** Escolhi o app de gatos porque os dados são simples (textos e um número) e se encaixam bem em um CRUD de iniciante, com 8 campos. Fonte: enunciado da atividade do professor.
+6. **Feedback recebido e o que mudei:** Sem feedback formal registrado neste ciclo.
+7. **Próximo passo:** Fazer o primeiro programa que lê os dados de um gato com `input()` e mostra com `print()`.
 
 ## 🟢 CICLO 02 — 19/08 — Variáveis, tipos de dados e entrada/saída
 
@@ -234,31 +234,31 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **2a. Aprofundamento dos objetos de conhecimento (mínimo 2 referências com síntese da contribuição para a solução):**
 
-- **Referência 1:** DOWNEY, Allen. *Pense em Python*, cap. 2 (variáveis, expressões e instruções) e cap. 5 (condicionais). — **Contribuição:** Me mostrou que `input()` devolve `str` e que `"1"` é diferente de `1`; por isso comparei `escolhido == str(numero)` e guardei a idade como texto. Também me deu a estrutura `if/elif/else` do menu.
-- **Referência 2:** DOWNEY, Allen. *Pense em Python*, cap. 7 (iteração). — **Contribuição:** Explicou o `while` com condição de parada e o `break`. Usei `while True` com `break` no menu e `while` para repetir a pergunta até a entrada ser válida.
-- **Referência 3 (opcional):** Documentação oficial do Python, métodos de `str` (`isdigit`, `upper`). — **Contribuição:** Confirma que `"12".isdigit()` é `True` e `"abc".isdigit()` é `False`, usado na validação da idade.
+- **Referência 1:** DOWNEY, Allen. *Pense em Python*, cap. 2 (variáveis, expressões e instruções) e cap. 5 (condicionais). — **Contribuição:** Me mostrou que `input()` devolve `str` e que `"1"` é diferente de `1`; por isso comparei `escolhido == numero` (texto com texto) e converti com `int()` só para achar a posição. Deu a estrutura `if/elif/else` do menu e o uso de parênteses nas condições com `and`/`or`.
+- **Referência 2:** DOWNEY, Allen. *Pense em Python*, cap. 7 (iteração) e cap. 8 (strings). — **Contribuição:** Explicou o `while` com condição de parada e o `break`; usei `while True` com `break` no menu e `while` para repetir a pergunta até a entrada ser válida. O cap. 8 mostrou como percorrer um texto letra por letra com `for` e comparar letras, que usei para checar se a idade tem só dígitos.
+- **Referência 3:** DOWNEY, Allen. *Pense em Python*, cap. 10 (listas). — **Contribuição:** Explicou que as posições começam em 0; por isso `i = int(numero) - 1`, e as listas paralelas (`nomes`, `idades`...) usam a mesma posição `i` para o mesmo gato.
 
 **2b. Hipótese revisada — o que mudou em relação ao Campo 01 e por quê:**
 
-> [PREENCHER: compare com o SEU Campo 01. Escreva 3 a 5 linhas dizendo o que mudou depois da pesquisa nas referências acima. Exemplo de estrutura (use as suas palavras): "No Campo 01 eu achava que ___. Depois de ler ___, entendi que ___. Por isso agora considero que ___." Este campo precisa ser coerente com o Campo 01.]
+> [PREENCHER: depende do SEU Campo 01, que eu não posso escrever nem ver. Em 3 a 5 linhas, use esta estrutura com as suas palavras: "No Campo 01 eu achava que ___. Depois de ler (Referências 1 a 3) entendi que ___, por exemplo que o `input()` devolve texto e que a posição de uma lista começa em 0. Por isso agora considero que ___."]
 
 **2c. Dimensionamento inicial de recursos (recurso, quantidade estimada, justificativa técnica — mínimo 3 itens):**
 
 | RECURSO / MATERIAL / INSUMO | QUANTIDADE ESTIMADA | JUSTIFICATIVA TÉCNICA |
 |---|---|---|
-| Variáveis de registro (5 cadastros × 8 campos) | 40 variáveis + 8 temporárias | Sem listas, cada gato precisa de variáveis próprias; as temporárias (`t_...`) evitam repetir o código em cada operação |
-| Blocos `if/elif` de seleção do cadastro | 25 estimados (5 operações × 5 cadastros) | Cada operação precisaria identificar qual cadastro usar |
-| Casos de teste | 10 | Entrada inválida (idade e sexo), cadastrar, listar, atualizar, excluir com e sem confirmação, adotar, adotar gato já adotado, número inexistente, opção inválida |
-| Arquivos do projeto | 1 (`adocao_gatos.py`) | O enunciado proíbe funções, então tudo fica em um único script |
-| Horas de estudo | [PREENCHER: sua estimativa, ex.: 6 h] | Leitura dos capítulos 2, 5 e 7 e testes do código |
+| Listas de registro | 6 listas × 5 posições (30 posições) | Cada lista guarda um campo (nome, idade, sexo, cor, local, adotante); a mesma posição identifica o mesmo gato |
+| Validações de entrada | 4 (nome, idade, sexo, situação) | Impedem nome vazio, idade com letras e valores fora de M/F e 1/2 |
+| Casos de teste | 10 | Entradas inválidas, cadastrar, listar, atualizar, excluir com e sem confirmação, adotar, adotar gato já adotado, número inexistente, opção inválida |
+| Arquivos do projeto | 1 (`adocao_gatos.py`) | Programa simples, sem funções próprias |
+| Horas de estudo | 6 h | Leitura dos caps. 2, 5, 7, 8 e 10 e testes do código |
 
 #### Registro do Ciclo 02 — 19/08
 1. **Desafio do ciclo (em 1 frase):** Guardar os dados de um gato em variáveis do tipo certo e fazer a entrada (`input`) e a saída (`print`) de dados.
-2. **O que implementei (commits / arquivos / links):** Arquivo `adocao_gatos.py`, bloco inicial com as variáveis de cada cadastro (`nome1`, `idade1`, `sexo1`, `cor1`, `local1`, `situacao1`, `adotante1`, `cad1`). [PREENCHER: link do commit]
-3. **Objeto(s) de conhecimento mobilizado(s):** variável e atribuição; tipos de dados `str` e `bool`; entrada com `input()`, que sempre devolve `str`; saída com `print()`; concatenação de textos com `+`; conversão de tipo com `str()`.
-4. **Desvio ou erro encontrado + causa técnica:** Problema identificado: ao montar a mensagem `"Cadastro nº " + numero`, o Python dá `TypeError`, porque `+` não junta `str` com `int`. Causa: tipos diferentes. [PREENCHER: se esse erro (ou outro) aconteceu de verdade com você, confirme; senão, troque pelo erro real.]
-5. **Decisão de ajuste + fonte:** Usei `str(numero)` na concatenação. Guardei a idade como texto (`str`), porque o `input()` já devolve texto e assim evito o erro de `int("abc")`. Fonte: *Pense em Python*, cap. 2 (variáveis, expressões e instruções).
-6. **Feedback recebido e o que mudei:** [PREENCHER: feedback real ou "Sem feedback neste ciclo".]
+2. **O que implementei (commits / arquivos / links):** Arquivo `adocao_gatos.py`, com as variáveis do registro (`nomes`, `idades`, `sexos`, `cores`, `locais`, `adotantes`), a variável `opcao` do menu e as mensagens do `print`. Commit `docs(logbook): registro do ciclo 02`.
+3. **Objeto(s) de conhecimento mobilizado(s):** variável e atribuição; tipos de dados `str` e `bool` (`feito`, `ok`, `criando`); `input()`, que sempre devolve `str`; `print()`; concatenação de textos com `+`; conversão de tipo com `int()`.
+4. **Desvio ou erro encontrado + causa técnica:** Problema identificado: a variável `numero` do laço é um texto (`"1"`, `"2"`...). Usá-la direto como posição (`nomes[numero]`) dá `TypeError`, porque a posição precisa ser `int`. Causa: o `input()` e o laço sobre texto produzem `str`, não número.
+5. **Decisão de ajuste + fonte:** Converti com `i = int(numero) - 1`; o `- 1` é porque a posição começa em 0. Também mantive a idade como texto, já que `input()` devolve texto e ela só é mostrada, não calculada. Fonte: *Pense em Python*, cap. 2 (variáveis, expressões e instruções).
+6. **Feedback recebido e o que mudei:** Sem feedback formal registrado neste ciclo.
 7. **Próximo passo:** Usar operadores relacionais e lógicos para comparar o que o usuário digita.
 
 ## 🟢 CICLO 03 — 26/08 — Operadores, fluxogramas e paradigmas
@@ -272,12 +272,12 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 03 — 26/08
-1. **Desafio do ciclo (em 1 frase):** Usar operadores para comparar entradas e combinar condições (por exemplo, "o cadastro existe e é o número escolhido").
-2. **O que implementei (commits / arquivos / links):** Comparações com `==` e `!=` e o contador `total = total + 1` no arquivo `adocao_gatos.py`. [PREENCHER: link do commit]
-3. **Objeto(s) de conhecimento mobilizado(s):** operadores relacionais (`==`, `!=`), lógicos (`and`, `or`, `not`) e aritmético (`+` para contar); tipo `bool` como sinalizador (`encontrado`, `cadastrou`). [PREENCHER: se fez fluxograma, diga o que ele ajudou a perceber]
-4. **Desvio ou erro encontrado + causa técnica:** Risco típico: escrever `=` (atribuição) onde deveria ser `==` (comparação) dentro do `if`, o que gera `SyntaxError`. Outro: o `input()` devolve texto, então `"1" == 1` é `False`. [PREENCHER: confirme qual aconteceu com você]
-5. **Decisão de ajuste + fonte:** Comparei texto com texto: `escolhido == str(numero)`. Fonte: *Pense em Python*, cap. 5 (expressões booleanas e operadores lógicos).
-6. **Feedback recebido e o que mudei:** [PREENCHER: feedback real ou "Sem feedback neste ciclo".]
+1. **Desafio do ciclo (em 1 frase):** Usar operadores para comparar entradas e combinar condições (por exemplo, "é o cadastro escolhido **e** está ocupado").
+2. **O que implementei (commits / arquivos / links):** Comparações e condições combinadas no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 03`.
+3. **Objeto(s) de conhecimento mobilizado(s):** operadores relacionais (`==`, `!=`, `<`, `>`); lógicos (`and`, `or`); aritmético (`-`, em `int(numero) - 1`); `bool` como sinalizador (`feito`). Comparei letras com `"0"` e `"9"` para saber se a idade tem só dígitos.
+4. **Desvio ou erro encontrado + causa técnica:** Confusão entre `=` e `==`: na linha `criando = nomes[i] == ""` o primeiro `=` **atribui** e o segundo `==` **compara**; trocá-los muda o resultado ou dá `SyntaxError`. Outro ponto: `"1" == 1` é `False`, porque texto e número são tipos diferentes.
+5. **Decisão de ajuste + fonte:** Comparei sempre texto com texto (`escolhido == numero`). Fonte: *Pense em Python*, cap. 5 (expressões booleanas e operadores lógicos).
+6. **Feedback recebido e o que mudei:** Sem feedback formal registrado neste ciclo.
 7. **Próximo passo:** Montar o menu e as regras de negócio com `if`, `elif` e `else`.
 
 ## 🟢 CICLO 04 — 02/09 — Estruturas condicionais: `if`, `elif`, `else`
@@ -294,17 +294,18 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 04 — 02/09
 1. **Desafio do ciclo (em 1 frase):** Ligar cada condicional (`if`, `elif`, `else`) a uma regra de negócio do sistema de adoção.
-2. **O que implementei (commits / arquivos / links):** Menu com `if/elif/else` e as regras de adoção em `adocao_gatos.py`. [PREENCHER: link do commit]
+2. **O que implementei (commits / arquivos / links):** Menu e regras com `if/elif/else` no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 04`.
 3. **Objeto(s) de conhecimento mobilizado(s):** estrutura condicional `if/elif/else`; validação de entrada. Regras de negócio e condicionais correspondentes:
    - opção do menu inválida → `else` mostra erro;
-   - gato já adotado não pode ser adotado de novo → `if t_sit == "Adotado"`;
-   - número de cadastro inexistente → `if ... and encontrado == False` mostra erro;
-   - idade só com números → `while not t_idade.isdigit()`;
-   - exclusão só com confirmação → `if confirma == "S"`.
-4. **Desvio ou erro encontrado + causa técnica:** Teste que fiz: informei idade `abc` e sexo `x`; o programa recusou e pediu de novo, como esperado. Problema de projeto: sem listas e sem funções, o mesmo `if/elif` por cadastro se repetiria em cada operação (duplicação de código). [PREENCHER: se teve um erro real de indentação, `elif` fora de lugar etc., descreva]
-5. **Decisão de ajuste + fonte:** Concentrei a escolha do cadastro em um único bloco `if/elif` que carrega os dados nas variáveis temporárias (`t_nome`, `t_idade`...) e outro que salva de volta. Fonte: *Pense em Python*, cap. 5 (condicionais encadeadas); código gerado com ajuda de IA e testado por mim (ver Campo 04).
-6. **Feedback recebido e o que mudei:** [PREENCHER: feedback real ou "Sem feedback neste ciclo".]
-7. **Próximo passo:** Entender e explicar cada laço de repetição do programa (Ciclo 06).
+   - gato já adotado não pode ser adotado de novo → `elif adotantes[i] != ""`;
+   - número de cadastro inexistente → `if feito == False` ao final mostra erro;
+   - nome vazio ou idade com letras → repete a pergunta com `while`;
+   - exclusão só com confirmação → `if confirma == "S" or confirma == "s"`;
+   - situação do gato → disponível se `adotantes[i] == ""`, adotado caso contrário.
+4. **Desvio ou erro encontrado + causa técnica:** Teste: informei idade `abc` e sexo `x`; o programa recusou e perguntou de novo. Outro teste: pedir cadastro de número 3 vazio; o programa respondeu "não existe cadastro com o número informado". Ponto de atenção: a condição que reúne cadastrar e atualizar usa `and` dentro de `or` com parênteses; sem os parênteses a precedência (`and` antes de `or`) mudaria o resultado.
+5. **Decisão de ajuste + fonte:** Usei um `elif` único para cadastrar e atualizar, para não repetir as mesmas perguntas. Fonte: *Pense em Python*, cap. 5 (condicionais encadeadas); código desenvolvido com ajuda de IA e testado por mim (ver Campo 04).
+6. **Feedback recebido e o que mudei:** Sem feedback formal registrado neste ciclo.
+7. **Próximo passo:** Estudar e explicar cada laço de repetição do programa (Ciclo 06).
 
 ---
 
@@ -397,19 +398,19 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 *AV Qualis — Grupo 2 | Sábado 21/11, 23h59*
 
 **3a. O que descobri que mudou minha compreensão do problema (mínimo 2 achados, com objeto de conhecimento associado):**
-1. Sem listas nem funções, cada gato precisa de um conjunto próprio de variáveis, e a escolha do cadastro é feita com `if/elif` usando o número como identificador. — *Objeto de conhecimento:* variáveis e estrutura condicional.
-2. O `input()` devolve sempre texto; por isso o número digitado é comparado como texto (`escolhido == str(numero)`) e a idade é validada com `isdigit()`. — *Objeto de conhecimento:* tipos de dados e conversão de tipo.
-3. Um `for range(1, 6)` com variáveis temporárias evita repetir o mesmo código para cada cadastro. — *Objeto de conhecimento:* laço de repetição `for`.
+1. Seis listas paralelas, com a mesma posição `i` para o mesmo gato, bastam para guardar o cadastro; a vaga livre é o nome vazio e a situação é derivada do adotante (vazio = disponível). — *Objeto de conhecimento:* listas e variáveis.
+2. O `input()` e o laço sobre texto produzem `str`; por isso o número é comparado como texto (`escolhido == numero`) e convertido com `int(numero) - 1` só para achar a posição. — *Objeto de conhecimento:* tipos de dados e conversão de tipo.
+3. Um único `for` que passa pelos 5 cadastros serve a todas as operações, em vez de repetir o código para cada uma. — *Objeto de conhecimento:* laço de repetição `for`.
 
 **3b. Desvio em relação ao Campo 02 (ao menos 1 — causa técnica):**
-- **Desvio:** No Campo 02 estimei 25 blocos `if/elif` (5 operações × 5 cadastros). Na prática usei 10 (carregar e salvar, 5 cadastros cada) e um único `for` que serve a todas as operações.
-- **Causa técnica:** Sem funções, repetir o `if/elif` em cada operação duplicaria muito código e aumentaria o risco de erro. A variável do laço `numero` permite escolher o cadastro uma vez só.
+- **Desvio:** [PREENCHER até 21/11: algo que você planejou no Campo 02 e não aconteceu, com a causa técnica. Não vale "falta de tempo".]
+- **Causa técnica:** [PREENCHER]
 
 **3c. Decisão de ajuste (ao menos 1) com justificativa e fonte:**
-- **Decisão:** Adotar o padrão "carregar → agir → salvar" dentro de um `for`, com variáveis temporárias.
-- **Fonte:** Sugestão da IA (Campo 04), conferida com *Pense em Python*, cap. 7, e testada rodando o código com os 10 casos de teste do Campo 02.
+- **Decisão:** Derivar a situação do gato do campo `adotantes` (vazio = disponível) em vez de guardar uma variável de situação separada.
+- **Fonte:** Sugestão da IA (Campo 04), conferida rodando os 10 casos de teste do Campo 02.
 
-**Objeto de conhecimento mobilizado nesta decisão:** laço `for`, variáveis e condicionais `if/elif`.
+**Objeto de conhecimento mobilizado nesta decisão:** listas, condicionais (`adotantes[i] == ""`).
 
 ### 🧩 CAMPO 04 — Interação com IA
 *AV Qualis — Grupo 2 | Sábado 21/11, 23h59 | OBRIGATÓRIO*
@@ -431,19 +432,18 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 **4c. Resposta da IA (resumida em parágrafo):**
 
-> A IA entregou o arquivo `adocao_gatos.py` com 5 cadastros fixos, cada um com 8 variáveis. Um `while True` mostra o menu; para as opções 1 a 5, um `for` percorre os cadastros, copia os dados para variáveis temporárias, executa a operação escolhida (cadastrar, listar, atualizar, excluir ou adotar) e grava de volta. As entradas são validadas com `while`, e há mensagens de erro para opção inválida, número inexistente e gato já adotado. Ela também apresentou um exemplo de execução.
+> A IA entregou o `adocao_gatos.py`: um `while True` mostra o menu e, para as opções 1 a 5, um `for` percorre os 5 cadastros e executa a operação escolhida (cadastrar, listar, atualizar, excluir ou adotar). As entradas são validadas com `while`, e há mensagens de erro para opção inválida, número inexistente e gato já adotado. A versão final que está no repositório é uma versão resumida do mesmo programa: seis listas (uma por campo), situação derivada do campo `adotantes` e idade validada letra por letra, sem `isdigit()` e `upper()`.
 
 **4d. O que aceitei — com referência ao objeto de conhecimento do componente:**
 
-> Aceitei o `while True` com `break` no menu (laço de repetição). Aceitei o `if/elif/else` para validar as opções e as regras de adoção (estrutura condicional). Aceitei guardar a idade como `str` e validar com `isdigit()`, porque `input()` devolve texto (tipos de dados). Rodei o programa com entradas inválidas (idade `abc`, sexo `x`, número 3 inexistente, opção 9) e adotei o mesmo gato duas vezes; todos se comportaram como esperado.
+> Aceitei o `while True` com `break` no menu (laço de repetição) e o `if/elif/else` para validar opções e regras de adoção (estrutura condicional). Aceitei validar entradas com `while` e comparar texto com texto (tipos de dados). Rodei o programa com idade `abc`, sexo `x`, número 3 inexistente, opção 9 e adoção repetida do mesmo gato; todos se comportaram como esperado.
 
 **4e. O que questionei ou descartei — com argumento técnico ou fonte:**
 
-> 1. **Métodos `isdigit()` e `upper()`:** o enunciado lista só variáveis, condicionais, laços e entrada/saída. Esses métodos de `str` talvez estejam fora do conteúdo visto. Vou perguntar ao professor se são permitidos; se não forem, troco a validação por comparações com `if`. Fonte: documentação do Python (métodos de `str`).
-> 2. **Número do cadastro reaproveitado:** depois de excluir o cadastro 1, o próximo gato cadastrado recebe o número 1 de novo. Isso quebra a ideia de identificador único e foi uma limitação que percebi, não algo que a IA explicou.
-> 3. **Padrão "carregar → agir → salvar":** é menos óbvio para iniciante. Só vou mantê-lo se eu conseguir explicar cada linha na Defesa; a alternativa é repetir o `if/elif` em cada operação, que é mais longo, mas mais direto.
-> 4. **Capacidade de 5 gatos:** é uma limitação imposta pela proibição de listas. Ela é resolvida no Ciclo 07 (listas).
-> 5. **`isdigit()` e idade:** ele aceita `0` e números absurdos como `999`; a IA não validou faixa de idade. Poderia acrescentar uma condição `if` para limitar a idade.
+> 1. **`isdigit()` e `upper()`:** questionei a primeira versão, porque o enunciado lista só variáveis, condicionais, laços e entrada/saída. Descartei esses métodos e passei a validar a idade com `for letra in novo` e a comparar `"m"` com `"M"` por `if`. Fonte: *Pense em Python*, cap. 8.
+> 2. **Número do cadastro reaproveitado:** depois de excluir o cadastro 1, o próximo gato recebe o número 1 de novo. Isso quebra a ideia de identificador único; percebi ao testar, a IA não avisou.
+> 3. **Idade sem faixa:** o programa aceita `0` e `999`. Poderia limitar a faixa com um `if`.
+> 4. **Padrão do `for`:** o `for` com o `elif` longo é difícil para iniciante. Só mantenho se eu conseguir explicar cada linha na Defesa; a alternativa é repetir o código por operação, mais longa mas mais direta.
 
 ## 🟠 CICLO 05 — 09/09 — Condicionais aninhadas e operadores lógicos
 
@@ -459,16 +459,16 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 
 #### Registro do Ciclo 05 — 09/09
 1. **Desafio do ciclo (em 1 frase):** Combinar condições com `and`/`or` e aninhar `if` para decidir o que fazer em cada cadastro.
-2. **O que implementei (commits / arquivos / links):** Condições combinadas e `if` dentro de `if` em `adocao_gatos.py`. [PREENCHER: link do commit]
+2. **O que implementei (commits / arquivos / links):** Condições combinadas e `if` aninhados no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 05`.
 3. **Objeto(s) de conhecimento mobilizado(s):** operadores lógicos `and` e `or`; condicional aninhada. Combinações usadas:
    - `opcao == "1" or opcao == "2" or ... or opcao == "5"`: `or`, porque qualquer uma dessas opções vale;
-   - `escolhido == str(numero) and t_cad == True`: `and`, porque o cadastro tem de ser o escolhido **e** estar ocupado;
-   - `t_cad == False and cadastrou == False`: `and`, para pegar só o primeiro cadastro livre;
-   - aninhada: `if opcao == "5"` → `if t_sit == "Adotado"` → `else` pede o adotante.
-4. **Desvio ou erro encontrado + causa técnica:** Risco: se eu usasse `or` no lugar de `and` em `escolhido == str(numero) and t_cad == True`, o programa agiria em cadastros errados ou vazios. [PREENCHER: erro real, se houver]
-5. **Decisão de ajuste + fonte:** `and` para exigir as duas condições; aninhar `if` quando a segunda decisão só faz sentido depois da primeira. Fonte: *Pense em Python*, cap. 5.
+   - `(opcao == "3" and escolhido == numero and nomes[i] != "")`: `and`, porque o cadastro tem de ser o escolhido **e** estar ocupado;
+   - `(opcao == "1" and nomes[i] == "" and feito == False)`: `and`, para pegar só a primeira vaga livre;
+   - aninhada: `if opcao == "4"` → `if confirma == "S" or confirma == "s"`.
+4. **Desvio ou erro encontrado + causa técnica:** Se eu usasse `or` no lugar de `and` na condição do cadastro escolhido, o programa agiria em qualquer cadastro ocupado, não só no escolhido. Causa: `or` basta que uma parte seja verdadeira.
+5. **Decisão de ajuste + fonte:** `and` para exigir as duas condições; parênteses para separar "cadastrar" de "atualizar" dentro do mesmo `elif`. Fonte: *Pense em Python*, cap. 5.
    - **Caso de teste:** adotar o cadastro 1 duas vezes. Esperado: a segunda dá erro. Obtido: "Erro: Mingau já foi adotado por Maria." ✔
-6. **Feedback recebido e o que mudei:** [PREENCHER: feedback real ou "Sem feedback neste ciclo".]
+6. **Feedback recebido e o que mudei:** Sem feedback formal registrado neste ciclo.
 7. **Próximo passo:** Estudar os laços `for` e `while` do programa.
 
 ## 🟠 CICLO 06 — 30/09 — Devolutiva da P1 + repetição: `for`, `while`, `break`, `continue`
@@ -483,16 +483,17 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 </details>
 
 #### Registro do Ciclo 06 — 30/09
-1. **Desafio do ciclo (em 1 frase):** Escolher o laço certo (`for` ou `while`) para o menu, a percorrida dos cadastros e a validação de entradas.
-2. **O que implementei (commits / arquivos / links):** Três tipos de laço em `adocao_gatos.py`. [PREENCHER: link do commit]
-3. **Objeto(s) de conhecimento mobilizado(s):** laço `while` (condição de parada), `break`, laço `for` com `range`, laços aninhados.
+1. **Desafio do ciclo (em 1 frase):** Escolher o laço certo (`for` ou `while`) para o menu, a passagem pelos cadastros e a validação das entradas.
+2. **O que implementei (commits / arquivos / links):** Quatro usos de laço no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 06`.
+3. **Objeto(s) de conhecimento mobilizado(s):** `while` (condição de parada), `break`, `for` sobre texto, laços aninhados.
    - `while True` no menu: não sei quantas vezes o usuário vai usar; só para com `break` na opção 6;
-   - `for numero in range(1, 6)`: sei que são exatamente 5 cadastros;
-   - `while` de validação (idade, sexo, nome): repete a pergunta até a entrada ser válida.
-4. **Desvio ou erro encontrado + causa técnica:** Risco: um `while` de validação sem a leitura nova dentro do laço ficaria infinito, porque a condição nunca mudaria. Por isso repito o `input()` dentro de cada `while`. [PREENCHER: se teve laço infinito real, descreva]
-5. **Decisão de ajuste + fonte:** O `break` fica no `while` do menu, fora do `for`, assim ele encerra o programa e não só o `for`. Fonte: *Pense em Python*, cap. 7.
+   - `for numero in "12345"`: sei que são exatamente 5 cadastros;
+   - `for letra in novo`: confere letra por letra se a idade só tem dígitos;
+   - `while ok == False`: repete a pergunta até a entrada ser válida.
+4. **Desvio ou erro encontrado + causa técnica:** Um `while` de validação em que a pergunta não fosse repetida dentro do laço ficaria infinito, porque a condição nunca mudaria. Por isso o `input()` está dentro de cada `while`. Também: `for numero in "12345"` entrega texto, não número, daí o `int(numero)`.
+5. **Decisão de ajuste + fonte:** O `break` fica no `while` do menu, fora do `for`, para encerrar o programa e não só o `for`. Fonte: *Pense em Python*, cap. 7.
 6. **Feedback recebido (inclui devolutiva da P1) e o que mudei:** [PREENCHER: o que você errou na P1 e qual conceito faltava. Só você sabe; guarde para o Campo 07c.]
-7. **Próximo passo:** Ciclo 07 (listas): refazer o CRUD guardando os gatos em lista.
+7. **Próximo passo:** Ciclo 07 (listas): estudar a fundo as listas que o programa já usa.
 
 ## 🟠 CICLO 07 — 07/10 — Listas: armazenamento e iteração
 
