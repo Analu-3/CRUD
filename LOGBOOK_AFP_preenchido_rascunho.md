@@ -248,7 +248,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 | Listas de registro | 6 listas × 5 posições (30 posições) | Cada lista guarda um campo (nome, idade, sexo, cor, local, adotante); a mesma posição identifica o mesmo gato |
 | Validações de entrada | 4 (nome, idade, sexo, situação) | Impedem nome vazio, idade com letras e valores fora de M/F e 1/2 |
 | Casos de teste | 10 | Entradas inválidas, cadastrar, listar, atualizar, excluir com e sem confirmação, adotar, adotar gato já adotado, número inexistente, opção inválida |
-| Arquivos do projeto | 1 (`adocao_gatos.py`) | Programa simples, sem funções próprias |
+| Arquivos do projeto | 1 (`crud_gatinhos.py`) | Programa simples, sem funções próprias |
 | Horas de estudo | 6 h | Leitura dos caps. 2, 5, 7, 8 e 10 e testes do código |
 
 #### Registro do Ciclo 02 — 19/08
