@@ -23,14 +23,14 @@
 
 | Campo | Preencha |
 |---|---|
-| **Nome do estudante** | [PREENCHER: seu nome completo] |
-| **Curso / Módulo** | [PREENCHER: seu curso e período] |
+| **Nome do estudante** | Ana Lúcia Mendonça Castelo Branco |
+| **Curso / Módulo** |Engenharia de Software 2º período|
 | **Unidade curricular** | Algoritmos e Programação — UnDB 2026.2 |
 | **Professor** | Rondineli Seba Salomão |
 | **App-base do meu CRUD** | Sistema de adoção de gatos abandonados ou de rua (cadastro de gatos resgatados e controle das adoções) |
-| **Link do meu repositório** | [PREENCHER: https://github.com/seu-usuario/seu-repositorio] |
-| **Dupla de revisão (Campo 05)** | [PREENCHER: nome do colega, quando o professor definir] |
-| **Função neste ciclo** | _Autor do meu CRUD · Revisor do CRUD de um colega_ |
+| **Link do meu repositório** |  |
+| **Dupla de revisão (Campo 05)** |Mateus Henrique Pina Silva |
+| **Função neste ciclo** | _Autor:Ana Lúcia.Revisor: Mateus Pina_ |
 
 ---
 
