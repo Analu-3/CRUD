@@ -106,10 +106,10 @@ Atualize a cada commit (troque ⬜ por ✅).
 
 | Grupo | Item | Prazo | Preenchido | Commit |
 |:--:|---|---|:--:|:--:|
-| 1 | Identificação | 16/11 | ⬜ | ⬜ |
-| 1 | Registros dos Ciclos 01, 02, 03 e 04 | 16/11 | ⬜ | ⬜ |
-| 1 | Campo 01 — Instrumento de entrada | 16/11 | ⬜ | ⬜ |
-| 1 | Campo 02 — Aprofundamento | 16/11 | ⬜ | ⬜ |
+| 1 | Identificação | 16/11 | ✅ | ✅ |
+| 1 | Registros dos Ciclos 01, 02, 03 e 04 | 16/11 | ✅ | ✅ |
+| 1 | Campo 01 — Instrumento de entrada | 16/11 | ✅ | ✅|
+| 1 | Campo 02 — Aprofundamento | 16/11 | ✅ | ✅ |
 | 2 | Registros dos Ciclos 05, 06, 07 e 08 | 21/11 | ⬜ | ⬜ |
 | 2 | Checkpoint Conceitual | 21/11 | ⬜ | ⬜ |
 | 2 | Campo 03 — Execução e desvios | 21/11 | ⬜ | ⬜ |
@@ -163,11 +163,11 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 > **Sugestão de ordem:** (1) Identificação → (2) **Campo 01 primeiro, sem consulta** → (3) Registros dos Ciclos 01 a 04 → (4) Campo 02, com pesquisa.
 
 **Checklist do Grupo 1**
-- [ ] Identificação preenchida (app-base, link do repositório, dupla de revisão)
-- [ ] Campo 01: 3 objetos de conhecimento, 3 lacunas, hipótese de até 5 linhas
-- [ ] Registros dos Ciclos 01, 02, 03 e 04 com os 7 itens
-- [ ] Campo 02: 2 referências com contribuição, hipótese revisada, 3 recursos
-- [ ] Commits no GitHub e painel atualizado
+- [✓] Identificação preenchida (app-base, link do repositório, dupla de revisão)
+- [✓] Campo 01: 3 objetos de conhecimento, 3 lacunas, hipótese de até 5 linhas
+- [✓] Registros dos Ciclos 01, 02, 03 e 04 com os 7 itens
+- [✓] Campo 02: 2 referências com contribuição, hipótese revisada, 3 recursos
+- [✓] Commits no GitHub e painel atualizado
 
 ## 🟢 CICLO 01 — 12/08 — Preparação do laboratório e escolha do projeto
 
@@ -221,8 +221,7 @@ Cada ciclo tem sua própria seção abaixo, já com o modelo. Se precisar de esp
 **1b. Lacunas — o que não sei e preciso descobrir (mínimo 3, com precisão técnica):**
 1. _Ainda tenho dificuldade para entender como guardar várias informações de diferentes gatos sem misturar os dados._
 2. _Não sei validar corretamente o que o usuário digita, principalmente quando ele deixa um campo obrigatório vazio._
-3. _Tenho dúvida sobre como o programa consegue repetir o menu e continuar funcionando até o usuário escolher sair.
-_
+3. _Tenho dúvida sobre como o programa consegue repetir o menu e continuar funcionando até o usuário escolher sair._
 
 **1c. Hipótese inicial em até 5 linhas — com lógica da área de formação:**
 
@@ -398,52 +397,42 @@ _
 *AV Qualis — Grupo 2 | Sábado 21/11, 23h59*
 
 **3a. O que descobri que mudou minha compreensão do problema (mínimo 2 achados, com objeto de conhecimento associado):**
-1. Seis listas paralelas, com a mesma posição `i` para o mesmo gato, bastam para guardar o cadastro; a vaga livre é o nome vazio e a situação é derivada do adotante (vazio = disponível). — *Objeto de conhecimento:* listas e variáveis.
-2. O `input()` e o laço sobre texto produzem `str`; por isso o número é comparado como texto (`escolhido == numero`) e convertido com `int(numero) - 1` só para achar a posição. — *Objeto de conhecimento:* tipos de dados e conversão de tipo.
-3. Um único `for` que passa pelos 5 cadastros serve a todas as operações, em vez de repetir o código para cada uma. — *Objeto de conhecimento:* laço de repetição `for`.
+
 
 **3b. Desvio em relação ao Campo 02 (ao menos 1 — causa técnica):**
 - **Desvio:** [PREENCHER até 21/11: algo que você planejou no Campo 02 e não aconteceu, com a causa técnica. Não vale "falta de tempo".]
 - **Causa técnica:** [PREENCHER]
 
 **3c. Decisão de ajuste (ao menos 1) com justificativa e fonte:**
-- **Decisão:** Derivar a situação do gato do campo `adotantes` (vazio = disponível) em vez de guardar uma variável de situação separada.
-- **Fonte:** Sugestão da IA (Campo 04), conferida rodando os 10 casos de teste do Campo 02.
+- **Decisão:**
+- **Fonte:** 
 
-**Objeto de conhecimento mobilizado nesta decisão:** listas, condicionais (`adotantes[i] == ""`).
+**Objeto de conhecimento mobilizado nesta decisão:**
 
 ### 🧩 CAMPO 04 — Interação com IA
 *AV Qualis — Grupo 2 | Sábado 21/11, 23h59 | OBRIGATÓRIO*
 
 > **Obrigatório e avaliado. Print sem análise crítica = devolução imediata. Reproduzir a IA sem questionamento = reprovado.**
 
-**4a. Ferramenta:** Claude (Anthropic)  **Data:** 16/11/2026
+**4a. Ferramenta:**  **Data:** 
 
 **4b. Pergunta formulada (transcrita integralmente):**
 
-> Crie um sistema CRUD de adoção de gatos abandonados ou de rua, com o objetivo de cadastrar gatos resgatados e facilitar o controle de suas adoções.
-> Regras obrigatórias: Utilize somente os seguintes conceitos de programação: Variáveis. Condicionais (if, else e elif). Laços de repetição (while e for). Entrada de dados e exibição de mensagens.
-> Não utilize: funções criadas pelo programador, classes, objetos, banco de dados, APIs, bibliotecas externas, listas ou estruturas de dados avançadas. Mantenha o código simples, adequado para iniciantes.
-> Funcionalidades do CRUD: (Criar): cadastrar um gato informando nome, idade, sexo, cor, local onde foi encontrado e situação de adoção. (Ler): exibir os dados dos gatos cadastrados, permitindo consultar os registros disponíveis. Update (Atualizar): atualizar os dados de um gato cadastrado, identificando-o por um número de cadastro. Delete (Excluir): excluir um cadastro, solicitando confirmação antes da exclusão.
-> Menu principal: O sistema deve apresentar um menu em um laço de repetição, com as opções: 1. Cadastrar gato. 2. Listar gatos cadastrados. 3. Atualizar cadastro. 4. Excluir cadastro. 5. Registrar adoção. 6. Sair do sistema.
-> Regras de funcionamento: Cada gato deve possuir um número de identificação. O sistema deve informar se o gato está disponível para adoção ou se já foi adotado. Ao registrar uma adoção, solicitar o nome do adotante e atualizar a situação do gato. Não permitir a adoção de um gato que já foi adotado. Verificar se o número informado corresponde a um cadastro existente. Exibir mensagens de erro quando uma opção inválida for escolhida. Utilizar condicionais para validar as opções do menu e laços de repetição para manter o sistema funcionando até o usuário escolher sair. Como não será utilizado banco de dados, os registros podem ser mantidos em variáveis durante a execução do programa.
-> Importante: como listas e funções estão proibidas, implemente o cadastro de uma quantidade limitada de gatos usando variáveis individuais para cada registro. Utilize condicionais para identificar qual cadastro será consultado, atualizado ou excluído.
-> Entregue o código completo em Python, com comentários simples explicando as variáveis, as condicionais e os laços de repetição. Ao final, apresente um exemplo de execução do programa. Priorize a simplicidade, a organização e o uso exclusivo dos conceitos básicos solicitados.
+
 
 **4c. Resposta da IA (resumida em parágrafo):**
 
-> A IA entregou o `adocao_gatos.py`: um `while True` mostra o menu e, para as opções 1 a 5, um `for` percorre os 5 cadastros e executa a operação escolhida (cadastrar, listar, atualizar, excluir ou adotar). As entradas são validadas com `while`, e há mensagens de erro para opção inválida, número inexistente e gato já adotado. A versão final que está no repositório é uma versão resumida do mesmo programa: seis listas (uma por campo), situação derivada do campo `adotantes` e idade validada letra por letra, sem `isdigit()` e `upper()`.
 
 **4d. O que aceitei — com referência ao objeto de conhecimento do componente:**
 
-> Aceitei o `while True` com `break` no menu (laço de repetição) e o `if/elif/else` para validar opções e regras de adoção (estrutura condicional). Aceitei validar entradas com `while` e comparar texto com texto (tipos de dados). Rodei o programa com idade `abc`, sexo `x`, número 3 inexistente, opção 9 e adoção repetida do mesmo gato; todos se comportaram como esperado.
+
 
 **4e. O que questionei ou descartei — com argumento técnico ou fonte:**
 
-> 1. **`isdigit()` e `upper()`:** questionei a primeira versão, porque o enunciado lista só variáveis, condicionais, laços e entrada/saída. Descartei esses métodos e passei a validar a idade com `for letra in novo` e a comparar `"m"` com `"M"` por `if`. Fonte: *Pense em Python*, cap. 8.
-> 2. **Número do cadastro reaproveitado:** depois de excluir o cadastro 1, o próximo gato recebe o número 1 de novo. Isso quebra a ideia de identificador único; percebi ao testar, a IA não avisou.
-> 3. **Idade sem faixa:** o programa aceita `0` e `999`. Poderia limitar a faixa com um `if`.
-> 4. **Padrão do `for`:** o `for` com o `elif` longo é difícil para iniciante. Só mantenho se eu conseguir explicar cada linha na Defesa; a alternativa é repetir o código por operação, mais longa mas mais direta.
+> 1.
+> 2. 
+> 3. 
+> 4. 
 
 ## 🟠 CICLO 05 — 09/09 — Condicionais aninhadas e operadores lógicos
 
@@ -458,18 +447,15 @@ _
 </details>
 
 #### Registro do Ciclo 05 — 09/09
-1. **Desafio do ciclo (em 1 frase):** Combinar condições com `and`/`or` e aninhar `if` para decidir o que fazer em cada cadastro.
-2. **O que implementei (commits / arquivos / links):** Condições combinadas e `if` aninhados no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 05`.
-3. **Objeto(s) de conhecimento mobilizado(s):** operadores lógicos `and` e `or`; condicional aninhada. Combinações usadas:
-   - `opcao == "1" or opcao == "2" or ... or opcao == "5"`: `or`, porque qualquer uma dessas opções vale;
-   - `(opcao == "3" and escolhido == numero and nomes[i] != "")`: `and`, porque o cadastro tem de ser o escolhido **e** estar ocupado;
-   - `(opcao == "1" and nomes[i] == "" and feito == False)`: `and`, para pegar só a primeira vaga livre;
-   - aninhada: `if opcao == "4"` → `if confirma == "S" or confirma == "s"`.
-4. **Desvio ou erro encontrado + causa técnica:** Se eu usasse `or` no lugar de `and` na condição do cadastro escolhido, o programa agiria em qualquer cadastro ocupado, não só no escolhido. Causa: `or` basta que uma parte seja verdadeira.
-5. **Decisão de ajuste + fonte:** `and` para exigir as duas condições; parênteses para separar "cadastrar" de "atualizar" dentro do mesmo `elif`. Fonte: *Pense em Python*, cap. 5.
-   - **Caso de teste:** adotar o cadastro 1 duas vezes. Esperado: a segunda dá erro. Obtido: "Erro: Mingau já foi adotado por Maria." ✔
-6. **Feedback recebido e o que mudei:** Sem feedback formal registrado neste ciclo.
-7. **Próximo passo:** Estudar os laços `for` e `while` do programa.
+1. **Desafio do ciclo (em 1 frase):**
+2. **O que implementei (commits / arquivos / links):** 
+3. **Objeto(s) de conhecimento mobilizado(s):**
+
+4. **Desvio ou erro encontrado + causa técnica:**
+5. **Decisão de ajuste + fonte:**
+   - **Caso de teste:** 
+6. **Feedback recebido e o que mudei:** 
+7. **Próximo passo:** 
 
 ## 🟠 CICLO 06 — 30/09 — Devolutiva da P1 + repetição: `for`, `while`, `break`, `continue`
 
@@ -483,17 +469,13 @@ _
 </details>
 
 #### Registro do Ciclo 06 — 30/09
-1. **Desafio do ciclo (em 1 frase):** Escolher o laço certo (`for` ou `while`) para o menu, a passagem pelos cadastros e a validação das entradas.
-2. **O que implementei (commits / arquivos / links):** Quatro usos de laço no `adocao_gatos.py`. Commit `docs(logbook): registro do ciclo 06`.
-3. **Objeto(s) de conhecimento mobilizado(s):** `while` (condição de parada), `break`, `for` sobre texto, laços aninhados.
-   - `while True` no menu: não sei quantas vezes o usuário vai usar; só para com `break` na opção 6;
-   - `for numero in "12345"`: sei que são exatamente 5 cadastros;
-   - `for letra in novo`: confere letra por letra se a idade só tem dígitos;
-   - `while ok == False`: repete a pergunta até a entrada ser válida.
-4. **Desvio ou erro encontrado + causa técnica:** Um `while` de validação em que a pergunta não fosse repetida dentro do laço ficaria infinito, porque a condição nunca mudaria. Por isso o `input()` está dentro de cada `while`. Também: `for numero in "12345"` entrega texto, não número, daí o `int(numero)`.
-5. **Decisão de ajuste + fonte:** O `break` fica no `while` do menu, fora do `for`, para encerrar o programa e não só o `for`. Fonte: *Pense em Python*, cap. 7.
+1. **Desafio do ciclo (em 1 frase):** 
+2. **O que implementei (commits / arquivos / links):**
+3. **Objeto(s) de conhecimento mobilizado(s):** 
+4. **Desvio ou erro encontrado + causa técnica:**
+5. **Decisão de ajuste + fonte:** 
 6. **Feedback recebido (inclui devolutiva da P1) e o que mudei:** [PREENCHER: o que você errou na P1 e qual conceito faltava. Só você sabe; guarde para o Campo 07c.]
-7. **Próximo passo:** Ciclo 07 (listas): estudar a fundo as listas que o programa já usa.
+7. **Próximo passo:** 
 
 ## 🟠 CICLO 07 — 07/10 — Listas: armazenamento e iteração
 
