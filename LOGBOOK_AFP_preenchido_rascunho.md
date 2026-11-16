@@ -28,9 +28,9 @@
 | **Unidade curricular** | Algoritmos e Programação — UnDB 2026.2 |
 | **Professor** | Rondineli Seba Salomão |
 | **App-base do meu CRUD** | Sistema de adoção de gatos abandonados ou de rua (cadastro de gatos resgatados e controle das adoções) |
-| **Link do meu repositório** |  |
+| **Link do meu repositório** | https://github.com/Analu-3/CRUD/blob/main/crud_gatinhos.py |
 | **Dupla de revisão (Campo 05)** |Mateus Henrique Pina Silva |
-| **Função neste ciclo** | _Autor:Ana Lúcia.Revisor: Mateus Pina_ |
+| **Função neste ciclo** | _Autor: Ana Lúcia Revisor: Mateus Pina_ |
 
 ---
 
